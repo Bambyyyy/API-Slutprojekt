@@ -1,0 +1,43 @@
+@mixin addButton {
+  border: solid #6adcc4;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 25px;
+  color: #6adcc4;
+  transition: all 0.25s ease;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: 0.5s;
+
+  &:hover {
+    scale: 105%;
+    background-color: #6adcc4;
+    color: #171717;
+    border: solid #6adcc4;
+  }
+
+  &:disabled {
+    border: solid #cccccc;
+    background-color: #cccccc;
+    color: #666666;
+  }
+}
+
+@mixin removeButton {
+  border: solid #ff512f;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 25px;
+  color: #ff512f;
+  transition: all 0.25s ease;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: 0.5s;
+
+  &:hover {
+    scale: 105%;
+    background-color: #ff512f;
+    color: #171717;
+    border: solid #ff512f;
+  }
+}

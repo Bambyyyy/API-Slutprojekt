@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Document</title>
+    <script defer src="/dist/js/app.js"></script>
+</head>
+
+<body>
+
+    <div class="made-by-me">
+        <a href="https://www.linkedin.com/in/jesper-flood/">
+            <p>Made by Jesper Flood</p>
+        </a>
+    </div>
+    <header>
+        <p id="start-page">Startpage</p>
+        <div class="main-search">
+            <p id="watchlist">Watchlist</p>
+            <form class="catergory-field">
+                <label for="categories">Choose categorie:</label>
+                <select name="category" id="choose-category">
+                    <option value="movie" select>Movies</option>
+                    <option value="tv">Series</option>
+                </select>
+            </form>
+            <form class="search-box">
+                <input id="search-movie" type="text" placeholder="Enter movie here">
+                <button id="search-button" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </header>
+
+    <div id="show-cards">
+    </div>
+</body>
+
+</html>

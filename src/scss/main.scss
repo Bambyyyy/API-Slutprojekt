@@ -1,0 +1,320 @@
+@use "abstract/index" as *;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap");
+
+body {
+  font-family: "Poppins", "sans-serif";
+  font-size: small;
+  background-color: $backgroundBlack;
+  margin: 0;
+}
+
+// ============ LINKED IN HEADER =============
+
+.made-by-me {
+  background-color: $perfGreen;
+  text-align: center;
+  padding: 5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  transition: 0.5s;
+
+  &:hover {
+    scale: 110%;
+    color: $white;
+  }
+
+  p {
+    margin: 0px;
+    font-weight: bold;
+    color: $backgroundBlack;
+  }
+}
+
+// ============ LINKED IN HEADER =============
+
+#watchlist {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.nothing-found {
+  margin-top: 100px;
+  font-size: 50px;
+  color: $perfGreen;
+}
+
+// ======= Catergory BOX ==========
+
+.catergory-field {
+  font-size: 18px;
+  border: solid $perfGreen;
+  background-color: transparent;
+  color: $perfGreen;
+  padding: 5px 10px 5px 10px;
+  border-radius: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+  transition: 0.5s;
+
+  &:hover {
+    scale: 108%;
+  }
+}
+
+// ======= Catergory BOX ==========
+
+// ======= SEARCH BOX ==========
+
+header {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $newHeaderBlack;
+
+  input {
+    border-radius: 25px;
+    font-size: 18px;
+    border: none;
+
+    &:focus {
+      outline: none !important;
+    }
+  }
+
+  .main-search {
+    display: flex;
+    align-items: center;
+    margin-right: 27px;
+  }
+
+  p {
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0;
+    color: $backgroundBlack;
+    border: solid $perfGreen;
+    background-color: $perfGreen;
+    border-radius: 25px;
+    padding: 5px 10px 5px 10px;
+    transition: 0.5s;
+
+    &:hover {
+      scale: 118%;
+      color: $white;
+    }
+  }
+
+  #start-page {
+    margin-left: 33px;
+  }
+}
+
+form > button {
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 18px;
+  color: $perfGreen;
+}
+
+select {
+  border: none;
+  background-color: transparent;
+  color: $perfGreen;
+  background: $newHeaderBlack;
+  font-size: 18px;
+  outline: 0px;
+}
+
+.search-box {
+  border: solid $perfGreen;
+  background-color: transparent;
+  border-radius: 25px;
+  padding: 5px 10px 5px 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 18px;
+  transition: 0.5s;
+
+  &:hover {
+    scale: 108%;
+  }
+
+  button {
+    transition: 0.5s;
+  }
+
+  button:hover {
+    color: $white;
+    scale: 120%;
+  }
+
+  input {
+    background-color: transparent;
+    color: $perfGreen;
+  }
+
+  ::placeholder {
+    color: $perfGreen;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 40px $newHeaderBlack inset !important;
+  }
+
+  input:-webkit-autofill {
+    border: none !important;
+    -webkit-text-fill-color: $perfGreen !important;
+    background-color: $perfGreen !important;
+    -webkit-box-shadow: 0 0 0px 10px $perfGreen inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+}
+
+// ======= SEARCH BOX ==========
+
+#show-cards {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 95vw;
+  text-align: center;
+  margin: auto;
+  margin-top: 10px;
+  justify-content: space-evenly;
+}
+
+.movie-card {
+  width: 329px;
+  word-wrap: break-word;
+  margin: 1rem;
+  border-radius: 5px;
+  box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 1);
+  background-color: rgba(47, 79, 79, 0.693);
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.movie-card:hover {
+  scale: 105%;
+}
+
+.movie-card img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 100%;
+  min-height: 495px;
+  max-height: 495px;
+}
+
+.movie-info {
+  color: $perfGreen;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+  margin: auto;
+}
+
+.movie-card button {
+  @include addButton;
+}
+
+.movie-card .removeButton {
+  @include removeButton;
+}
+
+// ============ MOVIE CARD COLOR RATINGS =============
+
+.movie-info span {
+  background-color: darkslategray;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.movie-info span.green {
+  color: lightgreen;
+}
+
+.movie-info span.orange {
+  color: orange;
+}
+
+.movie-info span.red {
+  color: red;
+}
+
+.movie-info span.black {
+  color: black;
+}
+
+// ============ MOVIE CARD COLOR RATINGS =============
+
+// ============ MOVIE CARD DESCRIPTION =============
+
+.overview {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(33, 56, 56);
+  padding: 1rem;
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $perfGreen;
+}
+
+.movie-card:hover .overview {
+  transform: translate(0);
+}
+
+// ============ MOVIE CARD DESCRIPTION =============
+
+// =============== MOBILE VERSION ===============
+
+@media only screen and (max-width: 901px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    .catergory-field {
+      margin-bottom: 10px;
+      width: 258.013px;
+    }
+
+    .main-search {
+      margin: auto;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    #start-page {
+      margin: auto;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+// =============== MOBILE VERSION ===============
