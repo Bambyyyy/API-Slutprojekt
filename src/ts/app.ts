@@ -1,5 +1,5 @@
 // ============ API- & DOM-Stuff ============
-const apiKey = "api_key=12345678901234567890123456789012";
+const apiKey = "api_key=12345678901234567890123456789012"; // <<< Enter your own API-key here!
 const baseUrl = "https://api.themoviedb.org/3";
 const basUrl = "https://api.themoviedb.org/3/search/";
 
